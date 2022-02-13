@@ -208,6 +208,9 @@ img{
     color:#212121 
 }
 
+.navigation-list-link{
+    position: relative;
+}
 
 .address-mail:hover,
 .address-mail:focus,
@@ -235,27 +238,39 @@ img{
 }
 
 .navigation-list-link::after{
-    content: "";
     position: absolute;
-    width: 100%;
+    content: '';
+    display: block;
+    top: 45px;
+    right: 0;
+    width: 0;
     height: 4px;
-    left: 0;
-    bottom: -33px;
-    display: none;
-
-    background-color: transparent;
+    background-color: #2196f3;
     border-radius: 2px;
-    display:none;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.navigation-list-link:hover::after,
-.navigation-list-link:focus::after{
-    display: flex;
+.navigation-list-link:hover::after{
+    width: 100%;
     background-color: var(--main-color);
 }
 
+.navigation-list-link-active {
+  width: 100%;
+  color: var(--main-color);
+}
 
+
+.navigation-list-link-active::after {
+  content: "";
+  width: 53px;
+  height: 4px;
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background-color: var(--main-color);
+  border-radius: 2px;
+}
 .address{
     font-style: normal;   
     color: #757575;   
