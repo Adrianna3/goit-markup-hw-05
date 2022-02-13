@@ -57,7 +57,7 @@
       <section class="button section">
         <div class="container button-content">
           <h1>EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU</h1>
-        <button class="model-btn" type="button">Zamów usługe</button>
+        <button class="model-btn" type="button" data-modal-open>Zamów usługe</button>
         </div>
       </section>
 
@@ -363,5 +363,17 @@
         </div> 
       </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="close-btn" data-modal-close>
+        <svg class="close-icon">
+          <use href="images/icons.svg/spriteX.svg#icon-close-black-18dp-2-1"></use>
+        </svg>
+        </button>
+      </div>
+    </div>
+
+    <script src="modal.js"></script>
   </body>
 </html>
